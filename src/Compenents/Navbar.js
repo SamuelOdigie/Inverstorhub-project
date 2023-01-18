@@ -1,16 +1,17 @@
 import React from "react";
 import "./Navbar.css";
+import { Link } from "react-router-dom";
 function Navbar() {
   return (
     <nav className="navbar-container">
-      <a href="./">
+      <Link to="./">
         InvestorsHub
         <i class="fa-sharp fa-solid fa-arrow-up-right-dots" />
-      </a>
+      </Link>
       <ul>
         <li>
           <button>
-            <a href="/sign-in">Sign in</a>
+            <Link to="./SignIn">Sign in</Link>
           </button>
         </li>
       </ul>
