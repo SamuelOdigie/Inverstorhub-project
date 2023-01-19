@@ -1,8 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import "./SignIn.css";
 
-function SignIn() {
-  return <div>signIn</div>;
-}
+const SignIn = () => {
+  const { email, setEmail } = useState("");
+  const { password, setPassword } = useState("");
+  const signIn = () => {
+    //function to handle the logic
+  };
+  return (
+    <div className="sign-in-container">
+      <form>
+        <h1> Login</h1>
+        <input
+          type="email"
+          placeholder="Enter your Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        ></input>
+        <input
+          type="password"
+          placeholder="Enter your Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        ></input>
+        <button type="submit">Log in</button>
+      </form>
+    </div>
+  );
+};
 
 export default SignIn;
