@@ -1,29 +1,39 @@
+import { signInWithEmailAndPassword } from "firebase/auth";
 import React, { useState } from "react";
-import "./SignIn.css";
+import { getAuth } from "firebase/auth";
 
 const SignIn = () => {
-  const { email, setEmail } = useState("");
-  const { password, setPassword } = useState("");
-  const signIn = () => {
-    //function to handle the logic
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const signIn = (e) => {
+    e.preventDefault();
+    signInWithEmailAndPassword(getAuth, email, password)
+      .then((userCredential) => {
+        console.log(userCredential);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
+
   return (
     <div className="sign-in-container">
-      <form>
-        <h1> Login</h1>
+      <form onSubmit={signIn}>
+        <h1>Log In to your Account</h1>
         <input
           type="email"
-          placeholder="Enter your Email"
+          placeholder="Enter your email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         ></input>
         <input
           type="password"
-          placeholder="Enter your Password"
+          placeholder="Enter your password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         ></input>
-        <button type="submit">Log in</button>
+        <button type="submit">Log In</button>
       </form>
     </div>
   );
