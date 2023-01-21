@@ -1,6 +1,6 @@
-import { signInWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 import React, { useState } from "react";
-import { getAuth } from "firebase/auth";
+import { auth } from "../../../Firebase";
 
 const SignIn = () => {
   const [email, setEmail] = useState("");
@@ -8,12 +8,15 @@ const SignIn = () => {
 
   const signIn = (e) => {
     e.preventDefault();
-    signInWithEmailAndPassword(getAuth, email, password)
+
+    console.log(email, password);
+
+    signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         console.log(userCredential);
       })
       .catch((error) => {
-        console.log(error);
+        alert(error.message);
       });
   };
 
