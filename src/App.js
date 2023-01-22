@@ -7,6 +7,7 @@ import SignUp from "./Compenents/Pages/SignUp";
 import Home from "./Compenents/Pages/Home";
 import { auth } from "./Firebase";
 import "./App.css";
+import Sidebar from "./Compenents/Sidebar";
 
 function App() {
   const navigate = useNavigate();
@@ -16,9 +17,6 @@ function App() {
     const listen = onAuthStateChanged(auth, (user) => {
       if (user) {
         setAuthUser(user);
-        navigate("/");
-      } else {
-        setAuthUser(null);
         navigate("/");
       }
     });
@@ -41,6 +39,7 @@ function App() {
       {" "}
       <div className="App">
         <Navbar authUser={authUser} userSignOut={userSignOut} />
+        <Sidebar />
 
         <Routes>
           <Route path="/SignIn" element={<SignIn />} />

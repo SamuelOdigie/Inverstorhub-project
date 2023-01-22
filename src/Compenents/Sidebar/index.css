@@ -1,0 +1,10 @@
+.sidebar-container {
+  background: #333;
+  height: 900px;
+  width: 150px;
+}
+.sidebar-container ul {
+  justify-content: space-between;
+  list-style: none;
+  line-height: 70px;
+}
