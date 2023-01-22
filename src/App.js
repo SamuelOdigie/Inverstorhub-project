@@ -17,7 +17,7 @@ function App() {
     const listen = onAuthStateChanged(auth, (user) => {
       if (user) {
         setAuthUser(user);
-        navigate("/");
+        navigate("/Home");
       }
     });
 
@@ -39,13 +39,12 @@ function App() {
       {" "}
       <div className="App">
         <Navbar authUser={authUser} userSignOut={userSignOut} />
-        <Sidebar />
-
         <Routes>
           <Route path="/SignIn" element={<SignIn />} />
           <Route path="/SignUp" element={<SignUp />} />
-          {authUser && <Route path="/home" element={<Home />} />}
+          <Route path="/Home" element={<Home />} />
         </Routes>
+        <Sidebar />
       </div>
     </>
   );
