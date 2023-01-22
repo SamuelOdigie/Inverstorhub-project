@@ -1,4 +1,4 @@
-.home-container {
-  align-content: center;
+.home-container ul {
+  text-align: center;
   display: flex;
 }

@@ -1,24 +1,28 @@
-import React from 'react'
-import './Home.css'
+import React, { useState } from 'react'
+import { useEffect } from 'react';
 
+import './Home.css'
 const options = {
 	method: 'GET',
 	headers: {
 		'X-RapidAPI-Key': '7a201ff920msh788088c7da888bbp187279jsn887f82efe663',
-		'X-RapidAPI-Host': 'coinranking1.p.rapidapi.com'
+		'X-RapidAPI-Host': 'real-time-finance-data.p.rapidapi.com'
 	}
 };
 
-fetch('https://coinranking1.p.rapidapi.com/coins?referenceCurrencyUuid=yhjMzLPhuIDl&timePeriod=24h&tiers%5B0%5D=1&orderBy=marketCap&orderDirection=desc&limit=50&offset=0', options)
-	.then(response => response.json())
-	.then(response => console.log(response))
-	.catch(err => console.error(err));
 function Home() {
+	const {news,setNews} = useState('')
+	useEffect(()=> {fetch('https://real-time-finance-data.p.rapidapi.com/search?query=Apple', options)
+	.then(response => response.json())
+	.then(data => console.log(data))
+	.catch(err => console.error(err));
+})
+
   return (
     <div className='home-container'>
-        Home
+    
     </div>
   )
 }
 
-export default Home
+export default Home	
