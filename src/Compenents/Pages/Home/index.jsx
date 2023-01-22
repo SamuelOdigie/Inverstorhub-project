@@ -14,7 +14,7 @@ function Home() {
 	const {news,setNews} = useState('')
 	useEffect(()=> {fetch('https://real-time-finance-data.p.rapidapi.com/search?query=Apple', options)
 	.then(response => response.json())
-	.then(data => console.log(data))
+	.then(response => console.log("news", response.data.stock[0]))
 	.catch(err => console.error(err));
 })
 

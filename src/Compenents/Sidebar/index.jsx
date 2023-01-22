@@ -4,7 +4,7 @@ import './index.css'
 function Sidebar() {
   return (
     <div className='sidebar-container'>
-        <ul>
+        <ul style= {{marginTop:0}}>
             <li>
                 <Link to='./Home'>Home <i class="fa-solid fa-house-user"/></Link>
 
