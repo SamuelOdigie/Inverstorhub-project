@@ -8,6 +8,10 @@ import Home from "./Compenents/Pages/Home";
 import { auth } from "./Firebase";
 import "./App.css";
 import Sidebar from "./Compenents/Sidebar";
+import Stocks from "./Compenents/Pages/Stocks/Index";
+import Crypto from "./Compenents/Pages/Crypto/index";
+import Portfolio from "./Compenents/Pages/Portfoilo";
+import About from "./Compenents/Pages/About";
 
 function App() {
   const navigate = useNavigate();
@@ -43,6 +47,10 @@ function App() {
           <Route path="/SignIn" element={<SignIn />} />
           <Route path="/SignUp" element={<SignUp />} />
           <Route path="/Home" element={<Home />} />
+          <Route path="/Stocks" element={<Stocks />} />
+          <Route path="/Crypto" element={<Crypto />} />
+          <Route path="/Portfoilo" element={<Portfolio />} />
+          <Route path="/AboutUs" element={<About />} />
         </Routes>
         <Sidebar />
       </div>
