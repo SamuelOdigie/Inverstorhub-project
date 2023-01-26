@@ -2,7 +2,7 @@
   background: #333;
   height: 1650px;
   width: 150px;
-  position: absolute;
+  position: relative;
 }
 .sidebar-container ul {
   justify-content: space-between;
