@@ -10,7 +10,7 @@ import "./App.css";
 import Sidebar from "./Compenents/Sidebar";
 import Stocks from "./Compenents/Pages/Stocks/Index";
 import Crypto from "./Compenents/Pages/Crypto/index";
-import Portfolio from "./Compenents/Pages/Portfoilo";
+
 import About from "./Compenents/Pages/About";
 
 function App() {
@@ -43,16 +43,18 @@ function App() {
       {" "}
       <div className="App">
         <Navbar authUser={authUser} userSignOut={userSignOut} />
-        <Routes>
-          <Route path="/SignIn" element={<SignIn />} />
-          <Route path="/SignUp" element={<SignUp />} />
-          <Route path="/Home" element={<Home />} />
-          <Route path="/Stocks" element={<Stocks />} />
-          <Route path="/Crypto" element={<Crypto />} />
-          <Route path="/Portfoilo" element={<Portfolio />} />
-          <Route path="/AboutUs" element={<About />} />
-        </Routes>
-        <Sidebar />
+        <div className="flex-change">
+          <Sidebar />
+          <Routes>
+            <Route path="/SignIn" element={<SignIn />} />
+            <Route path="/SignUp" element={<SignUp />} />
+            <Route path="/Home" element={<Home />} />
+            <Route path="/Stocks" element={<Stocks />} />
+            <Route path="/Crypto" element={<Crypto />} />
+
+            <Route path="/AboutUs" element={<About />} />
+          </Routes>
+        </div>
       </div>
     </>
   );

@@ -5,3 +5,7 @@ body {
 * {
   box-sizing: border-box;
 }
+
+.flex-change {
+  display: flex;
+}

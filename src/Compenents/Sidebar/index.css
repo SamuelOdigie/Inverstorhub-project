@@ -1,7 +1,8 @@
 .sidebar-container {
   background: #333;
-  height: 900px;
+  height: 1650px;
   width: 150px;
+  position: absolute;
 }
 .sidebar-container ul {
   justify-content: space-between;

@@ -1,0 +1,20 @@
+.table-data {
+  overflow: auto;
+  width: 75%;
+  height: 75%;
+}
+
+.styled-table {
+  border-collapse: collapse;
+  margin: 25px 10px;
+  width: 300px;
+  height: 200px;
+  overflow: auto;
+}
+
+.styled-table thead tr {
+  background-color: black;
+  color: #ffffff;
+  text-align: center;
+  margin: 2rem;
+}

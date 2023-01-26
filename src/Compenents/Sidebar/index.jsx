@@ -18,10 +18,6 @@ function Sidebar() {
 
             </li>
             <li>
-                <Link to='Portfolio'> Portfolio<i class="fa-solid fa-wallet"/> </Link>
-
-            </li>
-            <li>
                 <Link to='AboutUs'>About <i class="fa-solid fa-address-card"/></Link>
 
             </li>

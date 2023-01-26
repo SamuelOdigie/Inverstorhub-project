@@ -2,3 +2,30 @@
   text-align: center;
   display: flex;
 }
+
+.home-container {
+  padding: 2rem;
+}
+.home-container .table-data {
+  overflow: auto;
+  width: 400px;
+  height: 400px;
+}
+
+.home-container .styled-table {
+  border-collapse: collapse;
+  margin: 25px 10px;
+  width: 300px;
+  height: 300px;
+  overflow: auto;
+}
+
+.styled-table thead tr {
+  background-color: black;
+  color: #ffffff;
+  text-align: left;
+  margin: 2rem;
+}
+.header {
+  text-align: center;
+}
